@@ -1,0 +1,16 @@
+<button class="play" (click)="play()">播放</button>
+<button class="pause" (click)="pause()">暂停</button>
+<button class="stop" (click)="stop()">停止</button>
+
+<input type="range" min="0" max="100" step="1" [(ngModel)]="test" (change)="changeZoom($event)" list="numbers" />
+
+{{test}}
+
+
+<datalist id="numbers">
+  <option>10</option> 
+  <option label="30">30</option> 
+  <option label="midpoint">50</option> 
+  <option>70</option>
+  <option>90</option> 
+</datalist>
