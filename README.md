@@ -5,18 +5,18 @@
 
 -------
 
-# 为什么要做异步加载？
+### 为什么要做异步加载？
 由于项目中经常用到一些第三方库，但如果直接打包进项目里面去的话，无疑是增加打包后的js体积。
 所以出于对性能的追求，我在项目中用到的大型第三方库都使用了懒加载。
 
 
 -------
 
-# 使用方式
+### 使用方式
 
 先申请百度地图开发者账号，并获取ak值
 
-## 1. import
+##### 1. import
 
 ```
  import MitBaiduMapModule form './MitBaiduMapModule';
@@ -29,17 +29,17 @@
 export class BusinessModule { };
 ``` 
 
-## 2.use in components
+##### 2.use in components
 ```
  <app-mit-baidu-map [ak]="'你的ak值:string'" [config]=“这里就是你要在地图上渲染的配置啦，具体看官方api文档:objcet” [geolocation]=“是否开启所在城市定位:boolean”></app-mit-baidu-map>
 ```
-## 3.特别注意
+##### 3.特别注意
 别忘了为该组件加入固定的高度，不然百度地图显示不出来！！
 
 -------
 
 
-# 测试环境
+### 测试环境
 angular-cli: 1.0.0-beta.21
 node: 7.2.1
 os: darwin x64
